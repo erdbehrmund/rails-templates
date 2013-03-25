@@ -533,7 +533,7 @@ HAML
 
 run "rm .rspec"
 file ".rspec", "--colour --drb --format documentation -p"
-run "curl https://github.com/RailsApps/rails-composer/blob/master/files/gitignore.txt > .gitignore"
+run "curl https://raw.github.com/RailsApps/rails-composer/master/files/gitignore.txt > .gitignore"
 
 run "powder link" if yes? "Create dev app via pow at '#{app_name}.dev' ?"
 
