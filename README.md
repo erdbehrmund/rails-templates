@@ -17,3 +17,8 @@ The app should be available at http://project-name.dev if you ran the pow thing
 - Admin skeleton with: inherited_resources, simple_form, carrierwave, haml, bootstrap, compass
 - rspec, factory_girl, spork, shoulda, webmock for testing
 - Generates an admin login page and dashboard
+
+
+### TODO
+
+Fix database.yml stuff
