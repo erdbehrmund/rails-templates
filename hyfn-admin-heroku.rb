@@ -9,25 +9,24 @@ app_title = camelized.underscore.humanize.titlecase
 gem 'mysql2'
 gem 'foreigner'
 gem 'squeel'
+gem 'ransack'
+
 
 gem 'newrelic_rpm'
 gem 'airbrake'
+
 gem 'andand'
 
 gem 'inherited_resources'
 gem 'has_scope'
 
 gem 'haml', '>= 3.1.7'
-
-gem 'ransack'
+gem 'simple_form', '>= 2.0.4'
 gem 'carrierwave'
-
 gem 'fog'
 gem 'mini_magick'
-gem 'simple_form', '>= 2.0.4'
 gem 'kaminari'
 gem 'bootstrap_kaminari'
-gem 'jquery-rails'
 gem 'bootstrap-sass', '>= 2.1.1.0'
 gem 'bootstrap-datepicker-rails'
 gem 'bootstrap-wysihtml5-rails'
@@ -37,11 +36,7 @@ gem 'memcachier'
 gem 'dalli'
 
 gem_group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
   gem 'compass-rails'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
-  gem 'jquery-ui-rails'
   gem 'underscore-rails'
 end
 
