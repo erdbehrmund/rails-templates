@@ -87,6 +87,21 @@ initializer 'airbrake.rb', <<-RUBY
   end
 RUBY
 
+initializer 'carrierwave.rb', <<-RUBY
+CarrierWave.configure do |config|
+  config.fog_credentials = {
+    :provider               => 'AWS',
+    :aws_access_key_id      => ENV['AWS_ACCESS_KEY_ID'],
+    :aws_secret_access_key  => ENV['AWS_SECRET_ACCESS_KEY'],
+    :region                 => 'us-east-1',
+    # :host                   => "https://d1e3iwfphrf4uu.cloudfront.net",
+  }
+  config.fog_directory  = '#{app_name}-hyfn'
+  config.fog_public     = true
+  config.fog_attributes = {'Cache-Control' => 'max-age=315576000'}
+end
+RUBY
+
 # Puma Initializer
 file 'config/puma.rb', <<-'RUBY'
 require "active_record"
@@ -119,7 +134,6 @@ YAML
     
   run "curl https://raw.github.com/gist/2253296/newrelic.yml > newrelic.yml"
 end
-
 
 
 ####################################
