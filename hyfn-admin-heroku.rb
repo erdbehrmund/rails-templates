@@ -11,7 +11,6 @@ gem 'foreigner'
 gem 'squeel'
 gem 'ransack'
 
-
 gem 'newrelic_rpm'
 gem 'airbrake'
 
@@ -243,7 +242,7 @@ COFFEE-SCRIPT
 
 # Admin CSS
 
-file 'app/assets/javascripts/admin.css.scss', <<-'SCSS'
+file 'app/assets/stylesheets/admin.css.scss', <<-'SCSS'
 @import "bootstrap";
 body { padding-top: 60px; }
 @import "bootstrap-datepicker";
@@ -360,8 +359,8 @@ RUBY
 
 # Base Admin Controller
 
-file 'app/controllers/admin_controller.rb', <<-'RUBY'
-class AdminController < InheritedResources::Base
+file 'app/controllers/admin_resource_controller.rb', <<-'RUBY'
+class AdminResourceController < InheritedResources::Base
   include Authenticable
   layout "admin"
   respond_to :html
