@@ -183,11 +183,13 @@ environment development_rb, env: "development"
 
 # TODO: consider setting up for CDN
 production_rb = <<-'RUBY' 
-  
-# puma safe!
-config.threadsafe! unless defined?($rails_rake_task) && $rails_rake_task
+
+  # puma safe!
+  config.threadsafe! unless defined?($rails_rake_task) && $rails_rake_task
 RUBY
 environment production_rb, env: "production"
+
+run "cp config/environments/production.rb config/environments/staging.rb"
 
 inside "app" do
   run "mkdir concerns && touch concerns/.gitkeep"
