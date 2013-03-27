@@ -135,6 +135,8 @@ YAML
   run "curl https://raw.github.com/gist/2253296/newrelic.yml > newrelic.yml"
 end
 
+# Procfile
+file "Procfile", 'web: bundle exec puma -p $PORT -e $RACK_ENV -C config/puma.rb'
 
 ####################################
 # ENVIRONMENTS
