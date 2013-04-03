@@ -1,4 +1,4 @@
-# TODO: staging environment, CDN
+# TODO: staging environment, CDN, FactoryGirl, Spork, RSpec Support
 
 app_title = camelized.underscore.humanize.titlecase
 
