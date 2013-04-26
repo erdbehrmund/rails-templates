@@ -1,4 +1,4 @@
-# TODO: staging environment, CDN, FactoryGirl, Spork, RSpec Support
+# TODO: staging environment, CDN, FactoryGirl, Spork, RSpec Support, ignore session secret
 
 app_title = camelized.underscore.humanize.titlecase
 
